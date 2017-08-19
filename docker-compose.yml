@@ -1,0 +1,39 @@
+version: '3'
+services:
+
+  postgres:
+    container_name: docker-codeignite3-db
+    build: docker/db
+    volumes:
+      - ./docker/data/postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    expose:
+      - "5432"
+    environment:
+      - POSTGRES_DB=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_USER=docker
+      - PGDATA=/var/lib/postgresql/data
+
+  web:
+    container_name: docker-codeignite3-web
+    build: docker/web
+    ports:
+      - "8000:80"
+    volumes:
+      - ./html:/var/www/html
+    links:
+      - postgres
+
+  util:
+    container_name: docker-codeignite3-util
+    build: docker/util
+    ports:
+      - "8001:80"
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+    links:
+      - postgres
+
