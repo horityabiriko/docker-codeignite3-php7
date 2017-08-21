@@ -1,0 +1,8 @@
+html/application/cache/*
+html/application/logs/*
+html/!application/cache/index.html
+html/!application/cache/.htaccess
+html/application/logs/*
+html/!application/logs/index.html
+html/!application/logs/.htaccess
+html/docker/*
