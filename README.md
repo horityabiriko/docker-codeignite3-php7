@@ -1,4 +1,4 @@
-# docker-codeignite3-php7
+# Spec
 - Web Application Framework
   - CodeIgniter 3.1.5
 - Server
@@ -7,17 +7,21 @@
   - Postgres 9.4.6
   
 # Start
+```
 docker-compose up -d
+```
 
 # Stop
+```
 docker-compose stop
+```
 
 # web application
-Go to http://localhost:8000
-utility application
-phpinfo
+- Go to http://localhost:8000
+- utility application
+- phpinfo
 
 # phpPgAdmin
-Go to http://localhost:8001
-docker
-docker
+- Go to http://localhost:8001
+- docker
+- docker
