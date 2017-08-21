@@ -6,11 +6,12 @@ docker-compose up -d
 # Stop
 docker-compose stop
 
-web application
+# web application
 Go to http://localhost:8000
 utility application
 phpinfo
-phpPgAdmin
+
+# phpPgAdmin
 Go to http://localhost:8001
 docker
 docker
